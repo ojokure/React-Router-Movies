@@ -9,7 +9,6 @@ const MovieList = props => {
       axios
         .get('http://localhost:5000/api/movies')
         .then(response => {
-          // debugger
           setMovies(response.data);
         })
         .catch(error => {
@@ -26,6 +25,7 @@ const MovieList = props => {
       ))}
     </div>
   );
+  debugger
 }
 
 function MovieDetails({ movie }) {
