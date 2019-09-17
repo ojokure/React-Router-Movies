@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import MovieList from "./MovieList";
-import App from "../App";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 const Movie = props => {
   const id = props.match.params.id;
@@ -27,7 +26,6 @@ const Movie = props => {
     // const addToSavedList = props.save;
     props.save(movie);
   };
-  debugger;
 
   if (!movie) {
     return <div>Loading movie information...</div>;
@@ -53,7 +51,7 @@ const Movie = props => {
         ))}
       </div>
       <div className="save-button" onClick={saveMovie}>
-        <NavLink to={`/movies/${movie.id}`}> Save </NavLink>
+        Save
       </div>
     </div>
   );
